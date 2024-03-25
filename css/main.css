@@ -1,0 +1,531 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto&family=Noto+Serif+TC:wght@400;500;600&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font: inherit;
+				vertical-align: baseline;
+}
+
+ol, ul {
+				list-style: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+				display: block;
+}
+
+audio, canvas, video {
+				display: inline-block;
+}
+
+audio:not([controls]) {
+				display: none;
+				height: 0;
+}
+
+[hidden] {
+				display: none;
+}
+
+a, input {
+				-webkit-tap-highlight-color: transparent;
+}
+a:focus, input:focus {
+				outline: 0;
+}
+a:active, a:hover, input:active, input:hover {
+				outline: 0;
+}
+
+abbr[title] {
+				border-bottom: 1px dotted;
+}
+
+b, strong {
+				font-weight: bold;
+}
+
+dfn {
+				font-style: italic;
+}
+
+hr {
+				box-sizing: content-box;
+				height: 0;
+}
+
+mark {
+				background: #ff0;
+				color: #000;
+}
+
+code, kbd, pre, samp {
+				font-family: monospace, serif;
+				font-size: 1em;
+}
+
+pre {
+				white-space: pre-wrap;
+}
+
+q {
+				quotes: "“" "”" "‘" "’";
+}
+
+small {
+				font-size: 80%;
+}
+
+sub {
+				font-size: 75%;
+				line-height: 0;
+				position: relative;
+				vertical-align: baseline;
+}
+
+sup {
+				font-size: 75%;
+				line-height: 0;
+				position: relative;
+				vertical-align: baseline;
+				top: -0.5em;
+}
+
+sub {
+				bottom: -0.25em;
+}
+
+img {
+				width: 100%;
+				height: auto;
+				display: block;
+}
+
+svg:not(:root) {
+				overflow: hidden;
+}
+
+figure {
+				margin: 0;
+}
+
+fieldset {
+				border: 1px solid #c0c0c0;
+				margin: 0 2px;
+				padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+				border: 0;
+				padding: 0;
+}
+
+button, input, select, textarea {
+				font-family: inherit;
+				font-size: 100%;
+				margin: 0;
+}
+
+button, input {
+				line-height: normal;
+				background-color: transparent;
+				border: none;
+}
+
+button, select {
+				text-transform: none;
+}
+
+select, input {
+				-webkit-appearance: none;
+				outline: none;
+				border: none;
+				background-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+				-webkit-transition: background-color 5000s ease-in-out 0s;
+				transition: background-color 5000s ease-in-out 0s;
+}
+
+button, html input[type=button] {
+				-webkit-appearance: button;
+				cursor: pointer;
+}
+
+input[type=reset], input[type=submit] {
+				-webkit-appearance: button;
+				cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+				cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+				box-sizing: border-box;
+				padding: 0;
+}
+input[type=search] {
+				-webkit-appearance: textfield;
+				box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+				-webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+				border: 0;
+				padding: 0;
+}
+
+textarea {
+				overflow: auto;
+				vertical-align: top;
+}
+
+table {
+				border-collapse: collapse;
+				border-spacing: 0;
+}
+
+.clearfix {
+				zoom: 1;
+}
+.clearfix:before {
+				content: "";
+				display: table;
+}
+.clearfix:after {
+				content: "";
+				display: table;
+				clear: both;
+}
+
+html {
+				font-family: sans-serif;
+				line-height: 1;
+				font-size: 16px;
+}
+
+a {
+				text-decoration: none;
+				color: black;
+				display: block;
+				cursor: pointer;
+}
+
+@keyframes aniLoading {
+				50% {
+								opacity: 0;
+				}
+				100% {
+								opacity: 1;
+				}
+}
+@keyframes aniExpand {
+				from {
+								padding: 0.25rem;
+				}
+				to {
+								padding: 50px;
+								box-shadow: 0px 0px 0.4rem #4D5351;
+				}
+}
+@keyframes open {
+				0% {
+								transform: translate3d(-50%, -50%, 0) rotateY(0);
+				}
+				33.333% {
+								transform: translate3d(-150%, -50%, 0) rotateY(-180deg);
+				}
+				66.666% {
+								transform: translate3d(-150%, -50%, 0) rotateY(-180deg);
+				}
+				100% {
+								transform: translate3d(-150%, 50%, 0) rotateY(-180deg);
+				}
+}
+@keyframes close {
+				0% {
+								transform: translate3d(-150%, 50%, 0) rotateY(-180deg);
+				}
+				66.666% {
+								transform: translate3d(-150%, -50%, 0) rotateY(-180deg);
+				}
+				100% {
+								transform: translate3d(-50%, -50%, 0) rotateY(0deg);
+				}
+}
+@keyframes flip-open {
+				0% {
+								transform: rotateX(0deg);
+								z-index: 5;
+				}
+				50% {
+								transform: rotateX(0deg);
+								z-index: 5;
+				}
+				100% {
+								transform: rotateX(-180deg);
+								z-index: -1;
+				}
+}
+@keyframes letter-out {
+				0% {
+								transform: translate3d(-50%, 0, 0);
+				}
+				100% {
+								transform: translate3d(-50%, -105%, 0);
+				}
+}
+@keyframes flip-close {
+				0% {
+								transform: rotateX(-180deg);
+								z-index: -1;
+				}
+				50% {
+								transform: rotateX(0deg);
+								z-index: 5;
+				}
+				100% {
+								transform: rotateX(0deg);
+								z-index: 5;
+				}
+}
+@keyframes letter-in {
+				0% {
+								transform: translate3d(-50%, -105%, 0);
+				}
+				100% {
+								transform: translate3d(-50%, 0, 0);
+				}
+}
+html, body {
+				font-size: 100px;
+				font-family: "Noto Sans TC", Arial, Helvetica, "微軟正黑體", Microsoft JhengHei, Apple LiGothic, "蘋果儷中黑";
+				overflow-x: hidden;
+				background-color: #4D5351;
+}
+
+#wrapper #main {
+				position: relative;
+				max-width: 1920px;
+				margin: auto;
+				font-size: 0.2rem;
+				height: 100vh;
+				height: calc(var(--vh, 1vh) * 100);
+}
+@media screen and (max-width: 768px) {
+				#wrapper #main {
+								font-size: 4.67vw;
+				}
+}
+
+#__vconsole {
+				position: relative;
+				z-index: 1000000;
+}
+
+.loading {
+				width: 100%;
+				height: 100vh;
+				height: calc(var(--vh, 1vh) * 100);
+				background-color: #4D5351;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 99999;
+}
+.loading .container {
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+}
+.loading .container .pic {
+				width: 0.5em;
+				padding: 0.2rem;
+				border-radius: 9999px;
+				box-shadow: 0px 0px 0.2rem #ffffff;
+				animation: aniExpand 1.2s infinite;
+}
+
+.envelope {
+				z-index: 2;
+				position: absolute;
+				width: 19em;
+				height: 20em;
+				top: 50%;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0) rotateY(0);
+				transform-style: preserve-3d;
+				transform-origin: right center;
+				transition: transform 1s ease;
+}
+.envelope .front {
+				backface-visibility: hidden;
+				cursor: pointer;
+				display: table;
+}
+.envelope .front .mail {
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+}
+.envelope .front .mail p {
+				font-weight: bold;
+				margin: 0;
+}
+.envelope .front .mail p:first-child {
+				font-size: 2.5em;
+				line-height: 1em;
+				color: #666666;
+				margin-bottom: 0.25em;
+}
+.envelope .front .mail p:last-child {
+				font-size: 1em;
+				color: #333;
+}
+.envelope .back {
+				transform: rotateY(180deg) translate3d(0, 0, 1px);
+}
+.envelope .back .letter {
+				z-index: 1;
+				position: absolute;
+				top: 0.5em;
+				left: 50%;
+				transform: translate3d(-50%, 0, 0);
+				width: 95%;
+				height: 19em;
+				background-color: #fff;
+				border-radius: 5px;
+				padding: 1em 1.5em;
+				box-sizing: border-box;
+				box-shadow: 0 0px 1em 0.25em rgba(200, 178, 146, 0.8);
+}
+.envelope .back .letter .content {
+				height: 100%;
+				overflow-y: scroll;
+}
+.envelope .back .letter p {
+				letter-spacing: 0.066em;
+}
+.envelope .back .letter p:nth-of-type(1) {
+				font-size: 1em;
+				color: #666666;
+}
+.envelope .back .letter p:nth-child(2) {
+				font-size: 1.5em;
+				color: #333333;
+				margin-bottom: 2em;
+}
+.envelope .back .letter p:nth-child(3) {
+				font-size: 0.7em;
+				text-align: right;
+}
+.envelope .back .flip {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+}
+.envelope .back .flip:before {
+				content: "";
+				position: absolute;
+				background-color: #F5E6D1;
+				box-shadow: 0px 0px 5em rgba(200, 178, 146, 0.3);
+}
+.envelope .back .top-flip {
+				z-index: 5;
+				transform-origin: top center;
+}
+.envelope .back .top-flip:before {
+				transform-origin: top left;
+				transform: rotate(-45deg) translate(-13%, -21%);
+				border-bottom-left-radius: 4em;
+				border-top-left-radius: 0.5em;
+				border-bottom-right-radius: 0.5em;
+}
+.envelope .back .bottom-flip {
+				z-index: 4;
+}
+.envelope .back .bottom-flip:before {
+				transform-origin: left bottom;
+				transform: rotate(45deg) translate(-5%, 28%);
+				border-top-left-radius: 2.5em;
+				border-bottom-left-radius: 0.5em;
+				border-top-right-radius: 0.5em;
+}
+.envelope .back .left-flip {
+				z-index: 3;
+}
+.envelope .back .left-flip:before {
+				left: 0;
+				transform-origin: top left;
+				transform: rotate(45deg);
+				border-top-left-radius: 0.25em;
+				border-bottom-right-radius: 1.5em;
+				border-bottom-left-radius: 0.5em;
+				border-top-right-radius: 5em;
+}
+.envelope .back .right-flip {
+				z-index: 4;
+}
+.envelope .back .right-flip:before {
+				right: 0;
+				transform-origin: top right;
+				transform: rotate(-45deg);
+				border-top-right-radius: 0.5em;
+				border-bottom-left-radius: 1.5em;
+				border-top-left-radius: 5em;
+}
+.envelope.open {
+				animation: open 3s forwards;
+}
+.envelope.open .top-flip {
+				animation: flip-open 1s 1s forwards;
+}
+.envelope.open .letter {
+				animation: letter-out 1s 2s forwards;
+}
+.envelope.close {
+				transform: translate3d(-150%, 50%, 0) rotateY(-180deg);
+				animation: close 2.5s forwards;
+}
+.envelope.close .top-flip {
+				transform: rotateX(-180deg);
+				z-index: -1;
+				animation: flip-close 1s 1s forwards;
+}
+.envelope.close .letter {
+				transform: translate3d(-50%, -105%, 0);
+				animation: letter-in 1.5s forwards;
+}
+
+.envelope .front, .envelope .back {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: #F5E6D1;
+				border-bottom-right-radius: 3px;
+				border-bottom-left-radius: 3px;
+				box-shadow: 0 0 1em -0.15em #eadac2;
+}
+
+.envelope .back .top-flip:before, .envelope .back .bottom-flip:before {
+				width: 100%;
+				height: 100%;
+}
+
+.envelope .back .left-flip:before, .envelope .back .right-flip:before {
+				width: 100%;
+				height: 100%;
+				top: 0;
+}
+/*# sourceMappingURL=main.css.map */
