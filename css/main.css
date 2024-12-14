@@ -356,6 +356,22 @@ html, body {
 				animation: aniExpand 1.2s infinite;
 }
 
+.fadeLoading-enter-active {
+				transition: 0.5s;
+}
+
+.fadeLoading-leave-active {
+				transition: 0.5s;
+}
+
+.fadeLoading-enter-from, .fadeLoading-leave-to {
+				opacity: 0;
+}
+
+.fadeLoading-enter-to, .fadeLoading-leave-from {
+				opacity: 1;
+}
+
 .envelope {
 				z-index: 2;
 				position: absolute;
@@ -378,17 +394,16 @@ html, body {
 				display: table-cell;
 				vertical-align: middle;
 }
-.envelope .front .mail p {
+.envelope .front .mail a {
 				font-weight: bold;
-				margin: 0;
-}
-.envelope .front .mail p:first-child {
-				font-size: 2.5em;
+				font-size: 0.8em;
 				line-height: 1em;
 				color: #666666;
 				margin-bottom: 0.25em;
 }
-.envelope .front .mail p:last-child {
+.envelope .front .mail p {
+				font-weight: bold;
+				margin: 0;
 				font-size: 0.8em;
 				color: #333;
 }
@@ -416,6 +431,9 @@ html, body {
 }
 .envelope .back .letter .content::-webkit-scrollbar {
 				display: none;
+}
+.envelope .back .letter .content .new {
+				margin-bottom: 5em;
 }
 .envelope .back .letter h2 {
 				font-size: 1em;
